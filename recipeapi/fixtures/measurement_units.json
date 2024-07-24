@@ -1,0 +1,114 @@
+[
+    {
+        "model": "recipeapi.measurementunit",
+        "pk": 1,
+        "fields": {
+            "name": "Teaspoon (tsp)"
+        }
+    },
+    {
+        "model": "recipeapi.measurementunit",
+        "pk": 2,
+        "fields": {
+            "name": "Tablespoon (tbsp)"   
+        }
+    },
+    {
+        "model": "recipeapi.measurementunit",
+        "pk": 3,
+        "fields": {
+            "name": "Fluid ounce (fl oz)"
+        }
+    },
+    {
+        "model": "recipeapi.measurementunit",
+        "pk": 4,
+        "fields": {
+            "name": "Cup (c)" 
+        }
+    },
+    {
+        "model": "recipeapi.measurementunit",
+        "pk": 5,
+        "fields": {
+            "name": "Pint (pt)"
+        }
+    },
+    {
+        "model": "recipeapi.measurementunit",
+        "pk": 6,
+        "fields": {
+            "name": "Quart (qt)"
+        }
+    },
+    {
+        "model": "recipeapi.measurementunit",
+        "pk": 7,
+        "fields": {
+            "name": "Gallon (gal)"
+        }
+    },
+    {
+        "model": "recipeapi.measurementunit",
+        "pk": 8,
+        "fields": {
+            "name": "Milliliter (ml)"
+        }
+    },
+    {
+        "model": "recipeapi.measurementunit",
+        "pk": 9,
+        "fields": {
+            "name": "Liter (l)"
+        }
+    },
+    {
+        "model": "recipeapi.measurementunit",
+        "pk": 10,
+        "fields": {
+            "name": "Gram (g)"
+        }
+    },
+    {
+        "model": "recipeapi.measurementunit",
+        "pk": 11,
+        "fields": {
+            "name": "Kilogram (kg)"
+        }
+    },
+    {
+        "model": "recipeapi.measurementunit",
+        "pk":12,
+        "fields": {
+            "name": "Ounce (oz)"
+        }
+    },
+    {
+        "model": "recipeapi.measurementunit",
+        "pk": 13,
+        "fields": {
+            "name": "Pound (lb)"
+        }
+    },
+    {
+        "model": "recipeapi.measurementunit",
+        "pk": 14,
+        "fields": {      
+            "name": "Dash"
+        }
+    },
+    {
+        "model": "recipeapi.measurementunit",
+        "pk": 15,
+        "fields": {
+            "name": "Pinch"
+        }
+    },
+    {
+        "model": "recipeapi.measurementunit",
+        "pk": 16,
+        "fields": {
+            "name": "Drop"
+        }
+    }
+]
