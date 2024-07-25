@@ -1,10 +1,11 @@
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
-from recipeapi.views import UserViewSet, MeasurementUnitViewSet
+from recipeapi.views import UserViewSet, MeasurementUnitViewSet, RecipeViewSet
 
 router = DefaultRouter(trailing_slash=False)
-router.register(r'measurement_units', MeasurementUnitViewSet)
+router.register(r'measurement_units', MeasurementUnitViewSet, "measurement_unit")
+router.register(r'recipes', RecipeViewSet, "recipe")
 
 urlpatterns = [
     path('', include(router.urls)),

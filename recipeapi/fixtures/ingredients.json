@@ -1,0 +1,73 @@
+[
+    {
+      "model": "recipeapi.ingredient",
+      "pk": 1,
+      "fields": {
+        "name": "Salt"
+      }
+    },
+    {
+      "model": "recipeapi.ingredient",
+      "pk": 2,
+      "fields": {
+        "name": "Pepper"
+      }
+    },
+    {
+      "model": "recipeapi.ingredient",
+      "pk": 3,
+      "fields": {
+        "name": "Garlic"
+      }
+    },
+    {
+      "model": "recipeapi.ingredient",
+      "pk": 4,
+      "fields": {
+        "name": "Olive Oil"
+      }
+    },
+    {
+      "model": "recipeapi.ingredient",
+      "pk": 5,
+      "fields": {
+        "name": "Butter"
+      }
+    },
+    {
+      "model": "recipeapi.ingredient",
+      "pk": 6,
+      "fields": {
+        "name": "Flour"
+      }
+    },
+    {
+      "model": "recipeapi.ingredient",
+      "pk": 7,
+      "fields": {
+        "name": "Sugar"
+      }
+    },
+    {
+      "model": "recipeapi.ingredient",
+      "pk": 8,
+      "fields": {
+        "name": "Eggs"
+      }
+    },
+    {
+      "model": "recipeapi.ingredient",
+      "pk": 9,
+      "fields": {
+        "name": "Milk"
+      }
+    },
+    {
+      "model": "recipeapi.ingredient",
+      "pk": 10,
+      "fields": {
+        "name": "Tomato Sauce"
+      }
+    }
+  ]
+  
