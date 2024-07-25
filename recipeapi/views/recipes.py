@@ -3,6 +3,7 @@ from rest_framework import serializers
 from rest_framework.response import Response
 from recipeapi.models import Recipe, RecipeIngredient, MeasurementUnit, Ingredient
 from .ingredients import IngredientSerializer  # Ensure this serializer exists
+import json
 
 
 class RecipeSerializer(serializers.ModelSerializer):
@@ -65,10 +66,14 @@ class RecipeViewSet(viewsets.ViewSet):
 
         # Handle ingredients if provided
         ingredient_data = request.data.get('ingredients', [])
+
+        if isinstance(ingredient_data, str):
+            ingredient_data = json.loads(ingredient_data)
+
         for ingredient_item in ingredient_data:
             ingredient_name = ingredient_item.get('ingredient')  # Adjust based on actual key
             quantity = ingredient_item.get('quantity')  # Adjust based on actual key
-            measurement_unit_id = ingredient_item.get('measurementUnitId')  # Adjust based on actual key
+            measurement_unit_id = ingredient_item.get('measurement_unit')  # Adjust based on actual key
 
         # Find or create the Ingredient object based on the ingredient name
             ingredient = RecipeViewSet.find_or_create_ingredient(ingredient_name)
