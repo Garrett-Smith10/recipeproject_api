@@ -9,6 +9,7 @@ router = DefaultRouter(trailing_slash=False)
 router.register(r"measurement_units", MeasurementUnitViewSet, "measurement_unit")
 router.register(r"recipes", RecipeViewSet, "recipe")
 
+
 urlpatterns = [
     path("", include(router.urls)),
     path("login", UserViewSet.as_view({"post": "user_login"}), name="login"),

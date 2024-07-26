@@ -1,64 +1,68 @@
 [
-    {
-      "model": "recipeapi.recipe",
-      "pk": 1,
-      "fields": {
-        "name": "Spaghetti Bolognese",
-        "image": "recipes/spaghetti_bolognese.jpg",
-        "cooking_instructions": "1. Cook spaghetti. 2. Prepare the Bolognese sauce with minced beef and tomato sauce. 3. Combine and serve.",
-        "user": 1,
-        "public": true,
-        "ingredients": [1, 2]
-      }
-    },
-    {
-      "model": "recipeapi.recipe",
-      "pk": 2,
-      "fields": {
-        "name": "Chicken Caesar Salad",
-        "image": "recipes/chicken_caesar_salad.jpg",
-        "cooking_instructions": "1. Grill chicken. 2. Toss lettuce with Caesar dressing. 3. Add croutons, parmesan, and chicken. 4. Serve.",
-        "user": 2,
-        "public": true,
-        "ingredients": [3, 4]
-      }
-    },
-    {
-      "model": "recipeapi.recipe",
-      "pk": 3,
-      "fields": {
-        "name": "Vegetable Stir Fry",
-        "image": "recipes/vegetable_stir_fry.jpg",
-        "cooking_instructions": "1. Chop vegetables. 2. Stir fry vegetables in a wok with soy sauce. 3. Serve with rice or noodles.",
-        "user": 3,
-        "public": false,
-        "ingredients": [5, 6]
-      }
-    },
-    {
-      "model": "recipeapi.recipe",
-      "pk": 4,
-      "fields": {
-        "name": "Beef Tacos",
-        "image": "recipes/beef_tacos.jpg",
-        "cooking_instructions": "1. Cook beef with taco seasoning. 2. Prepare taco shells. 3. Fill shells with beef, lettuce, cheese, and salsa. 4. Serve.",
-        "user": 1,
-        "public": true,
-        "ingredients": [7, 8]
-      }
-    },
-    {
-      "model": "recipeapi.recipe",
-      "pk": 5,
-      "fields": {
-        "name": "Pancakes",
-        "image": "recipes/pancakes.jpg",
-        "cooking_instructions": "1. Mix pancake batter. 2. Cook pancakes on a griddle. 3. Serve with syrup and butter.",
-        "user": 2,
-        "public": false,
-        "ingredients": [9, 10]
-      }
+  {
+    "model": "recipeapi.recipe",
+    "pk": 1,
+    "fields": {
+      "name": "Classic Pancakes",
+      "image": "recipes/Clownfish_fheKlRC.jpg",
+      "cooking_instructions": "Mix flour, milk, eggs, and baking powder. Cook on a hot griddle until golden brown.",
+      "user_id": 1,
+      "public": false
     }
-  ]
-  
-  
+  },
+  {
+    "model": "recipeapi.recipe",
+    "pk": 2,
+    "fields": {
+      "name": "Spaghetti Bolognese",
+      "image": "recipes/Clownfish_fheKlRC.jpg",
+      "cooking_instructions": "Cook spaghetti. In a separate pan, cook ground beef with tomato sauce and spices. Mix together and serve.",
+      "user_id": 1,
+      "public": false
+    }
+  },
+  {
+    "model": "recipeapi.recipe",
+    "pk": 3,
+    "fields": {
+      "name": "Chicken Caesar Salad",
+      "image": "recipes/Clownfish_fheKlRC.jpg",
+      "cooking_instructions": "Grill chicken. Toss with lettuce, Caesar dressing, croutons, and parmesan cheese.",
+      "user_id": 1,
+      "public": false
+    }
+  },
+  {
+    "model": "recipeapi.recipe",
+    "pk": 4,
+    "fields": {
+      "name": "Beef Tacos",
+      "image": "recipes/Clownfish_fheKlRC.jpg",
+      "cooking_instructions": "Cook ground beef with taco seasoning. Serve in tortillas with toppings of choice.",
+      "user_id": 1,
+      "public": false
+    }
+  },
+  {
+    "model": "recipeapi.recipe",
+    "pk": 5,
+    "fields": {
+      "name": "Vegetable Stir-Fry",
+      "image": "recipes/Clownfish_fheKlRC.jpg",
+      "cooking_instructions": "Stir-fry mixed vegetables in a wok with soy sauce and garlic. Serve over rice.",
+      "user_id": 1,
+      "public": false
+    }
+  },
+  {
+    "model": "recipeapi.recipe",
+    "pk": 6,
+    "fields": {
+      "name": "Chocolate Chip Cookies",
+      "image": "recipes/Clownfish_fheKlRC.jpg",
+      "cooking_instructions": "Mix butter, sugar, eggs, flour, and chocolate chips. Bake at 350°F for 10-12 minutes.",
+      "user_id": 1,
+      "public": false
+    }
+  }
+]

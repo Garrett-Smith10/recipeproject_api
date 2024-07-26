@@ -1,0 +1,272 @@
+[
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 1,
+        "fields": {
+            "recipe": 1,
+            "ingredient": 1,
+            "quantity": 2,
+            "measurement_unit": 6
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 2,
+        "fields": {
+            "recipe": 1,
+            "ingredient": 2,
+            "quantity": 1.5,
+            "measurement_unit": 8
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 3,
+        "fields": {
+            "recipe": 1,
+            "ingredient": 3,
+            "quantity": 2,
+            "measurement_unit": 12
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 4,
+        "fields": {
+            "recipe": 1,
+            "ingredient": 4,
+            "quantity": 1,
+            "measurement_unit": 1
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 5,
+        "fields": {
+            "recipe": 2,
+            "ingredient": 5,
+            "quantity": 1,
+            "measurement_unit": 9
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 6,
+        "fields": {
+            "recipe": 2,
+            "ingredient": 6,
+            "quantity": 0.5,
+            "measurement_unit": 14
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 7,
+        "fields": {
+            "recipe": 2,
+            "ingredient": 7,
+            "quantity": 2,
+            "measurement_unit": 6
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 8,
+        "fields": {
+            "recipe": 2,
+            "ingredient": 8,
+            "quantity": 2,
+            "measurement_unit": 15
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 9,
+        "fields": {
+            "recipe": 3,
+            "ingredient": 9,
+            "quantity": 1,
+            "measurement_unit": 13
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 10,
+        "fields": {
+            "recipe": 3,
+            "ingredient": 10,
+            "quantity": 2,
+            "measurement_unit": 7
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 11,
+        "fields": {
+            "recipe": 3,
+            "ingredient": 11,
+            "quantity": 0.5,
+            "measurement_unit": 6
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 12,
+        "fields": {
+            "recipe": 3,
+            "ingredient": 12,
+            "quantity": 1,
+            "measurement_unit": 6
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 13,
+        "fields": {
+            "recipe": 3,
+            "ingredient": 13,
+            "quantity": 0.25,
+            "measurement_unit": 9
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 14,
+        "fields": {
+            "recipe": 4,
+            "ingredient": 6,
+            "quantity": 0.5,
+            "measurement_unit": 14
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 15,
+        "fields": {
+            "recipe": 4,
+            "ingredient": 14,
+            "quantity": 2,
+            "measurement_unit": 1
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 16,
+        "fields": {
+            "recipe": 4,
+            "ingredient": 15,
+            "quantity": 6,
+            "measurement_unit": 15
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 17,
+        "fields": {
+            "recipe": 4,
+            "ingredient": 16,
+            "quantity": 1,
+            "measurement_unit": 9
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 18,
+        "fields": {
+            "recipe": 4,
+            "ingredient": 10,
+            "quantity": 1,
+            "measurement_unit": 7
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 19,
+        "fields": {
+            "recipe": 5,
+            "ingredient": 17,
+            "quantity": 3,
+            "measurement_unit": 6
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 20,
+        "fields": {
+            "recipe": 5,
+            "ingredient": 18,
+            "quantity": 0.25,
+            "measurement_unit": 8
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 21,
+        "fields": {
+            "recipe": 5,
+            "ingredient": 8,
+            "quantity": 2,
+            "measurement_unit": 15
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 22,
+        "fields": {
+            "recipe": 5,
+            "ingredient": 19,
+            "quantity": 2,
+            "measurement_unit": 9
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 23,
+        "fields": {
+            "recipe": 6,
+            "ingredient": 20,
+            "quantity": 1,
+            "measurement_unit": 14
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 24,
+        "fields": {
+            "recipe": 6,
+            "ingredient": 21,
+            "quantity": 1,
+            "measurement_unit": 6
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 25,
+        "fields": {
+            "recipe": 6,
+            "ingredient": 3,
+            "quantity": 2,
+            "measurement_unit": 12
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 26,
+        "fields": {
+            "recipe": 6,
+            "ingredient": 1,
+            "quantity": 2,
+            "measurement_unit": 6
+        }
+    },
+    {
+        "model": "recipeapi.recipeingredient",
+        "pk": 27,
+        "fields": {
+            "recipe": 6,
+            "ingredient": 22,
+            "quantity": 1,
+            "measurement_unit": 9
+        }
+    }
+]
