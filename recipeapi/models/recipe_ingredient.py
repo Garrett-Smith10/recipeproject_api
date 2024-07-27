@@ -8,3 +8,4 @@ class RecipeIngredient(models.Model):
     ingredient = models.ForeignKey(Ingredient, on_delete=models.CASCADE)
     measurement_unit = models.ForeignKey(MeasurementUnit, on_delete=models.CASCADE)
     quantity = models.DecimalField(max_digits=5, decimal_places=2)
+    
