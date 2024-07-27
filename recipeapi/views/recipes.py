@@ -27,7 +27,7 @@ class RecipeSerializer(serializers.ModelSerializer):
                 {
                     "ingredient": ingredient.name,
                     "quantity": quantity,
-                    "measurement_unit": measurement_unit.id,  # Assuming you want to display the ID; adjust as needed
+                    "measurement_unit": measurement_unit.name,  # Assuming you want to display the ID; adjust as needed
                 }
             )
         return ingredients
