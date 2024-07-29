@@ -4,6 +4,7 @@ from rest_framework import serializers
 from rest_framework.response import Response
 from recipeapi.models import Recipe, RecipeIngredient, MeasurementUnit, Ingredient
 from .ingredients import IngredientSerializer  # Ensure this serializer exists
+from decimal import Decimal
 
 
 class RecipeSerializer(serializers.ModelSerializer):
@@ -23,11 +24,14 @@ class RecipeSerializer(serializers.ModelSerializer):
             ingredient = recipe_ingredient.ingredient
             quantity = recipe_ingredient.quantity
             measurement_unit = recipe_ingredient.measurement_unit
+            measurement_unit_id = recipe_ingredient.measurement_unit_id
+            measurement_unit_name = MeasurementUnit.objects.get(id=measurement_unit.id).name
             ingredients.append(
                 {
                     "ingredient": ingredient.name,
                     "quantity": quantity,
-                    "measurement_unit": measurement_unit.name,  # Assuming you want to display the ID; adjust as needed
+                    "measurement_unit_id": measurement_unit_id,
+                    "measurement_unit": measurement_unit_name,  # Assuming you want to display the name; adjust as needed
                 }
             )
         return ingredients
@@ -126,27 +130,49 @@ class RecipeViewSet(viewsets.ViewSet):
             recipe = Recipe.objects.get(pk=pk)
             self.check_object_permissions(request, recipe)  # Check permissions
 
-            serializer = RecipeSerializer(data=request.data, partial=True)
-            if serializer.is_valid():
-                # Update recipe fields
-                recipe.name = serializer.validated_data.get("name", recipe.name)
-                recipe.image = request.FILES.get("image", recipe.image)
-                recipe.cooking_instructions = serializer.validated_data.get(
-                    "cooking_instructions", recipe.cooking_instructions
+        # Extract recipe data
+            name = request.data.get("name", recipe.name)
+            image = request.FILES.get("image", recipe.image)
+            cooking_instructions = request.data.get("cooking_instructions", recipe.cooking_instructions)
+
+        # Update recipe fields
+            recipe.name = name
+            recipe.image = image
+            recipe.cooking_instructions = cooking_instructions
+            recipe.save()
+
+        # Handle ingredients
+            ingredient_data = request.data.get("ingredients", [])
+            for ingredient_info in ingredient_data:
+                ingredient_name = ingredient_info.get('ingredient')
+                quantity = ingredient_info.get('quantity')
+                measurement_unit_id = ingredient_info.get('measurement_unit')
+
+            # Find or create the Ingredient object
+                ingredient, _ = Ingredient.objects.get_or_create(name=ingredient_name)
+
+            # Find the MeasurementUnit object
+                measurement_unit = MeasurementUnit.objects.get(id=measurement_unit_id)
+
+            # Convert quantity to Decimal
+                quantity_decimal = Decimal(quantity)
+
+            # Create or update the RecipeIngredient association
+                RecipeIngredient.objects.update_or_create(
+                    recipe=recipe,
+                    ingredient=ingredient,
+                    defaults={
+                        "quantity": quantity_decimal,
+                        "measurement_unit": measurement_unit,
+                    },
                 )
-                recipe.save()
 
-                # Update ingredients
-                ingredient_ids = request.data.get("ingredients", [])
-                if ingredient_ids:
-                    recipe.ingredients.set(ingredient_ids)
-
-                return Response(None, status=status.HTTP_204_NO_CONTENT)
-
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            serializer = RecipeSerializer(recipe, context={"request": request})
+            return Response(serializer.data, status=status.HTTP_200_OK)
 
         except Recipe.DoesNotExist:
-            return Response(status=status.HTTP_404_NOT_FOUND)
+            return Response({"detail": "Recipe not found."}, status=status.HTTP_404_NOT_FOUND)
+
 
     def destroy(self, request, pk=None):
         try:
