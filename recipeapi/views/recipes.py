@@ -25,7 +25,9 @@ class RecipeSerializer(serializers.ModelSerializer):
             quantity = recipe_ingredient.quantity
             measurement_unit = recipe_ingredient.measurement_unit
             measurement_unit_id = recipe_ingredient.measurement_unit_id
-            measurement_unit_name = MeasurementUnit.objects.get(id=measurement_unit.id).name
+            measurement_unit_name = MeasurementUnit.objects.get(
+                id=measurement_unit.id
+            ).name
             ingredients.append(
                 {
                     "ingredient": ingredient.name,
@@ -130,34 +132,38 @@ class RecipeViewSet(viewsets.ViewSet):
             recipe = Recipe.objects.get(pk=pk)
             self.check_object_permissions(request, recipe)  # Check permissions
 
-        # Extract recipe data
+            # Extract recipe data
             name = request.data.get("name", recipe.name)
             image = request.FILES.get("image", recipe.image)
-            cooking_instructions = request.data.get("cooking_instructions", recipe.cooking_instructions)
+            cooking_instructions = request.data.get(
+                "cooking_instructions", recipe.cooking_instructions
+            )
 
-        # Update recipe fields
+            # Update recipe fields
             recipe.name = name
             recipe.image = image
             recipe.cooking_instructions = cooking_instructions
             recipe.save()
 
-        # Handle ingredients
+            RecipeIngredient.objects.filter(recipe=recipe).delete()
+
+            # Handle ingredients
             ingredient_data = request.data.get("ingredients", [])
             for ingredient_info in ingredient_data:
-                ingredient_name = ingredient_info.get('ingredient')
-                quantity = ingredient_info.get('quantity')
-                measurement_unit_id = ingredient_info.get('measurement_unit')
+                ingredient_name = ingredient_info.get("ingredient")
+                quantity = ingredient_info.get("quantity")
+                measurement_unit_id = ingredient_info.get("measurement_unit")
 
-            # Find or create the Ingredient object
+                # Find or create the Ingredient object
                 ingredient, _ = Ingredient.objects.get_or_create(name=ingredient_name)
 
-            # Find the MeasurementUnit object
+                # Find the MeasurementUnit object
                 measurement_unit = MeasurementUnit.objects.get(id=measurement_unit_id)
 
-            # Convert quantity to Decimal
+                # Convert quantity to Decimal
                 quantity_decimal = Decimal(quantity)
 
-            # Create or update the RecipeIngredient association
+                # Create or update the RecipeIngredient association
                 RecipeIngredient.objects.update_or_create(
                     recipe=recipe,
                     ingredient=ingredient,
@@ -171,8 +177,21 @@ class RecipeViewSet(viewsets.ViewSet):
             return Response(serializer.data, status=status.HTTP_200_OK)
 
         except Recipe.DoesNotExist:
-            return Response({"detail": "Recipe not found."}, status=status.HTTP_404_NOT_FOUND)
+            return Response(
+                {"detail": "Recipe not found."}, status=status.HTTP_404_NOT_FOUND
+            )
 
+    def upload_image(self, request, pk=None):
+        try:
+            recipe = Recipe.objects.get(pk=pk)
+            image_file = request.FILES["image"]
+            recipe.image = image_file
+            recipe.save()
+            return Response(
+                {"message": "Image uploaded successfully"}, status=status.HTTP_200_OK
+            )
+        except Exception as e:
+            return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
     def destroy(self, request, pk=None):
         try:
