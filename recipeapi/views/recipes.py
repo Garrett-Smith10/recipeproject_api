@@ -1,10 +1,11 @@
 import json
 from rest_framework import viewsets, status
 from rest_framework import serializers
+from rest_framework.decorators import action
 from rest_framework.response import Response
 from recipeapi.models import Recipe, RecipeIngredient, MeasurementUnit, Ingredient
-from .ingredients import IngredientSerializer  # Ensure this serializer exists
 from decimal import Decimal
+from django.shortcuts import get_object_or_404
 
 
 class RecipeSerializer(serializers.ModelSerializer):
@@ -68,8 +69,17 @@ class RecipeViewSet(viewsets.ViewSet):
             return Ingredient.objects.create(name=name)
 
     def list(self, request):
-        recipes = Recipe.objects.filter(user=request.user)
-        serializer = RecipeSerializer(recipes, many=True, context={"request": request})
+        # Start with all recipes belonging to the requesting user
+        queryset = Recipe.objects.filter(user=request.user)
+
+        # Check if the 'public_only' query parameter is set to True
+        if (
+            "public" in request.query_params
+            and request.query_params["public"] == "true"
+        ):
+            # If 'public_only' is true, filter the queryset to include only public recipes
+            queryset = queryset.filter(public=True)
+        serializer = RecipeSerializer(queryset, many=True, context={"request": request})
         return Response(serializer.data)
 
     def retrieve(self, request, pk=None):
@@ -203,3 +213,16 @@ class RecipeViewSet(viewsets.ViewSet):
 
         except Recipe.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
+
+    @action(methods=["patch"], detail=True)
+    def toggle_public(self, request, pk=None):
+        # Fetch the recipe instance using the primary key (pk)
+        recipe = get_object_or_404(Recipe, pk=pk)
+
+        # Toggle the public visibility of the recipe
+        recipe.public = not recipe.public
+        recipe.save()
+
+        return Response(
+            {"status": "success", "public": recipe.public}, status=status.HTTP_200_OK
+        )
