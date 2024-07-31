@@ -11,7 +11,7 @@ from django.shortcuts import get_object_or_404
 class RecipeSerializer(serializers.ModelSerializer):
     is_owner = serializers.SerializerMethodField()
     ingredients = serializers.SerializerMethodField()
-
+    
     def get_is_owner(self, obj):
         # Check if the authenticated user is the owner
         return self.context["request"].user == obj.user
@@ -48,6 +48,7 @@ class RecipeSerializer(serializers.ModelSerializer):
             "cooking_instructions",
             "is_owner",
             "ingredients",
+            "public",
         ]
 
 
@@ -70,15 +71,16 @@ class RecipeViewSet(viewsets.ViewSet):
 
     def list(self, request):
         # Start with all recipes belonging to the requesting user
-        queryset = Recipe.objects.filter(user=request.user)
+        user = request.user
 
-        # Check if the 'public_only' query parameter is set to True
-        if (
-            "public" in request.query_params
-            and request.query_params["public"] == "true"
-        ):
-            # If 'public_only' is true, filter the queryset to include only public recipes
-            queryset = queryset.filter(public=True)
+    # Check if the 'public' query parameter is set to True
+        if "public" in request.query_params and request.query_params["public"] == "true":
+            # If 'public' is true, return all public recipes
+            queryset = Recipe.objects.filter(public=True)
+        else:
+            # Otherwise, return only the recipes owned by the user
+            queryset = Recipe.objects.filter(user=user)
+
         serializer = RecipeSerializer(queryset, many=True, context={"request": request})
         return Response(serializer.data)
 
