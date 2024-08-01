@@ -18,7 +18,7 @@
       "image": "recipes/Clownfish_fheKlRC.jpg",
       "cooking_instructions": "Cook spaghetti. In a separate pan, cook ground beef with tomato sauce and spices. Mix together and serve.",
       "user_id": 1,
-      "public": false
+      "public": true
     }
   },
   {
@@ -40,7 +40,7 @@
       "image": "recipes/Clownfish_fheKlRC.jpg",
       "cooking_instructions": "Cook ground beef with taco seasoning. Serve in tortillas with toppings of choice.",
       "user_id": 1,
-      "public": false
+      "public": true
     }
   },
   {
@@ -62,7 +62,7 @@
       "image": "recipes/Clownfish_fheKlRC.jpg",
       "cooking_instructions": "Mix butter, sugar, eggs, flour, and chocolate chips. Bake at 350°F for 10-12 minutes.",
       "user_id": 2,
-      "public": false
+      "public": true
     }
   }
 ]

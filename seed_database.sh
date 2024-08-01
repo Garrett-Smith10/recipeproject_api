@@ -11,3 +11,5 @@ python3 manage.py loaddata measurement_units
 python3 manage.py loaddata recipes
 python3 manage.py loaddata ingredients
 python3 manage.py loaddata recipe_ingredients
+python3 manage.py loaddata grocery_lists
+python3 manage.py loaddata grocery_list_items
