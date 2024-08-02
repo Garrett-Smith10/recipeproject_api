@@ -1,68 +1,178 @@
 [
   {
     "model": "recipeapi.recipe",
-    "pk": 1,
+    "pk": 7,
     "fields": {
-      "name": "Classic Pancakes",
+      "name": "Margarita Pizza",
       "image": "recipes/Clownfish_fheKlRC.jpg",
-      "cooking_instructions": "Mix flour, milk, eggs, and baking powder. Cook on a hot griddle until golden brown.",
-      "user_id": 1,
-      "public": false
-    }
-  },
-  {
-    "model": "recipeapi.recipe",
-    "pk": 2,
-    "fields": {
-      "name": "Spaghetti Bolognese",
-      "image": "recipes/Clownfish_fheKlRC.jpg",
-      "cooking_instructions": "Cook spaghetti. In a separate pan, cook ground beef with tomato sauce and spices. Mix together and serve.",
+      "cooking_instructions": "Top pizza dough with tomato sauce, mozzarella cheese, and fresh basil. Bake at 475°F until crust is golden.",
       "user_id": 1,
       "public": true
     }
   },
   {
     "model": "recipeapi.recipe",
-    "pk": 3,
+    "pk": 8,
     "fields": {
-      "name": "Chicken Caesar Salad",
+      "name": "Caesar Salad",
       "image": "recipes/Clownfish_fheKlRC.jpg",
-      "cooking_instructions": "Grill chicken. Toss with lettuce, Caesar dressing, croutons, and parmesan cheese.",
+      "cooking_instructions": "Toss romaine lettuce with Caesar dressing, croutons, and parmesan cheese.",
       "user_id": 1,
       "public": false
     }
   },
   {
     "model": "recipeapi.recipe",
-    "pk": 4,
+    "pk": 9,
     "fields": {
-      "name": "Beef Tacos",
+      "name": "Beef Stroganoff",
       "image": "recipes/Clownfish_fheKlRC.jpg",
-      "cooking_instructions": "Cook ground beef with taco seasoning. Serve in tortillas with toppings of choice.",
-      "user_id": 1,
-      "public": true
-    }
-  },
-  {
-    "model": "recipeapi.recipe",
-    "pk": 5,
-    "fields": {
-      "name": "Vegetable Stir-Fry",
-      "image": "recipes/Clownfish_fheKlRC.jpg",
-      "cooking_instructions": "Stir-fry mixed vegetables in a wok with soy sauce and garlic. Serve over rice.",
-      "user_id": 1,
-      "public": false
-    }
-  },
-  {
-    "model": "recipeapi.recipe",
-    "pk": 6,
-    "fields": {
-      "name": "Chocolate Chip Cookies",
-      "image": "recipes/Clownfish_fheKlRC.jpg",
-      "cooking_instructions": "Mix butter, sugar, eggs, flour, and chocolate chips. Bake at 350°F for 10-12 minutes.",
+      "cooking_instructions": "Cook beef strips with onions and mushrooms. Add sour cream and serve over egg noodles.",
       "user_id": 2,
       "public": true
+    }
+  },
+  {
+    "model": "recipeapi.recipe",
+    "pk": 10,
+    "fields": {
+      "name": "Lemon Chicken",
+      "image": "recipes/Clownfish_fheKlRC.jpg",
+      "cooking_instructions": "Marinate chicken in lemon juice, garlic, and herbs. Bake until fully cooked.",
+      "user_id": 2,
+      "public": false
+    }
+  },
+  {
+    "model": "recipeapi.recipe",
+    "pk": 11,
+    "fields": {
+      "name": "Greek Salad",
+      "image": "recipes/Clownfish_fheKlRC.jpg",
+      "cooking_instructions": "Combine cucumbers, tomatoes, olives, and feta cheese. Dress with olive oil and oregano.",
+      "user_id": 2,
+      "public": true
+    }
+  },
+  {
+    "model": "recipeapi.recipe",
+    "pk": 12,
+    "fields": {
+      "name": "Chicken Alfredo",
+      "image": "recipes/Clownfish_fheKlRC.jpg",
+      "cooking_instructions": "Cook pasta and mix with chicken and Alfredo sauce. Garnish with parsley.",
+      "user_id": 3,
+      "public": false
+    }
+  },
+  {
+    "model": "recipeapi.recipe",
+    "pk": 13,
+    "fields": {
+      "name": "Pancetta Pasta",
+      "image": "recipes/Clownfish_fheKlRC.jpg",
+      "cooking_instructions": "Cook pasta and toss with pancetta, garlic, and cream sauce. Serve with parmesan cheese.",
+      "user_id": 3,
+      "public": true
+    }
+  },
+  {
+    "model": "recipeapi.recipe",
+    "pk": 14,
+    "fields": {
+      "name": "BBQ Ribs",
+      "image": "recipes/Clownfish_fheKlRC.jpg",
+      "cooking_instructions": "Season ribs with BBQ rub and cook slowly in the oven. Finish with BBQ sauce on the grill.",
+      "user_id": 4,
+      "public": false
+    }
+  },
+  {
+    "model": "recipeapi.recipe",
+    "pk": 15,
+    "fields": {
+      "name": "Stuffed Bell Peppers",
+      "image": "recipes/Clownfish_fheKlRC.jpg",
+      "cooking_instructions": "Fill bell peppers with a mixture of ground beef, rice, and tomato sauce. Bake until tender.",
+      "user_id": 4,
+      "public": true
+    }
+  },
+  {
+    "model": "recipeapi.recipe",
+    "pk": 16,
+    "fields": {
+      "name": "Pork Schnitzel",
+      "image": "recipes/Clownfish_fheKlRC.jpg",
+      "cooking_instructions": "Bread and fry pork cutlets. Serve with lemon wedges and a side of potato salad.",
+      "user_id": 5,
+      "public": true
+    }
+  },
+  {
+    "model": "recipeapi.recipe",
+    "pk": 17,
+    "fields": {
+      "name": "Apple Crisp",
+      "image": "recipes/Clownfish_fheKlRC.jpg",
+      "cooking_instructions": "Combine apples with sugar and cinnamon. Top with a crumbly mixture of oats and butter. Bake until golden.",
+      "user_id": 5,
+      "public": false
+    }
+  },
+  {
+    "model": "recipeapi.recipe",
+    "pk": 18,
+    "fields": {
+      "name": "Thai Green Curry",
+      "image": "recipes/Clownfish_fheKlRC.jpg",
+      "cooking_instructions": "Simmer green curry paste with coconut milk. Add vegetables and chicken or tofu. Serve with rice.",
+      "user_id": 6,
+      "public": true
+    }
+  },
+  {
+    "model": "recipeapi.recipe",
+    "pk": 19,
+    "fields": {
+      "name": "Eggplant Parmesan",
+      "image": "recipes/Clownfish_fheKlRC.jpg",
+      "cooking_instructions": "Layer breaded eggplant slices with marinara sauce and cheese. Bake until bubbly.",
+      "user_id": 6,
+      "public": false
+    }
+  },
+  {
+    "model": "recipeapi.recipe",
+    "pk": 20,
+    "fields": {
+      "name": "Baked Ziti",
+      "image": "recipes/Clownfish_fheKlRC.jpg",
+      "cooking_instructions": "Mix ziti pasta with marinara sauce and cheese. Bake until bubbly and golden.",
+      "user_id": 7,
+      "public": true
+    }
+  },
+  {
+    "model": "recipeapi.recipe",
+    "pk": 21,
+    "fields": {
+      "name": "Shrimp Scampi",
+      "image": "recipes/Clownfish_fheKlRC.jpg",
+      "cooking_instructions": "Sauté shrimp in garlic and butter. Toss with pasta and fresh parsley.",
+      "user_id": 7,
+      "public": true
+    }
+  },
+  {
+    "model": "recipeapi.recipe",
+    "pk": 22,
+    "fields": {
+      "name": "Vegetable Soup",
+      "image": "recipes/Clownfish_fheKlRC.jpg",
+      "cooking_instructions": "Simmer a variety of vegetables in vegetable broth. Season to taste.",
+      "user_id": 7,
+      "public": false
     }
   }
 ]

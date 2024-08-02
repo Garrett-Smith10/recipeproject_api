@@ -6,3 +6,4 @@ from.measurement_units import MeasurementUnitSerializer
 from.recipe_ingredients import RecipeIngredientSerializer
 from.grocery_list_items import GroceryListItemSerializer
 from.grocery_lists import GroceryListViewSet
+from.user_profiles import UserProfileViewSet
