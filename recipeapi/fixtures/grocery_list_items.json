@@ -1,0 +1,172 @@
+[
+    {
+        "model": "recipeapi.grocerylistitem",
+        "pk": 1,
+        "fields": {
+            "grocery_list": 1,
+            "ingredient_name": "Chicken Breast",
+            "measurement_unit": 1,
+            "quantity": 3
+        }
+    },
+    {
+        "model": "recipeapi.grocerylistitem",
+        "pk": 2,
+        "fields": {
+            "grocery_list": 1,
+            "ingredient_name": "Olive Oil",
+            "measurement_unit": 8,
+            "quantity": 1
+        }
+    },
+    {
+        "model": "recipeapi.grocerylistitem",
+        "pk": 3,
+        "fields": {
+            "grocery_list": 1,
+            "ingredient_name": "Garlic",
+            "measurement_unit": 12,
+            "quantity": 2
+        }
+    },
+    {
+        "model": "recipeapi.grocerylistitem",
+        "pk": 4,
+        "fields": {
+            "grocery_list": 1,
+            "ingredient_name": "Tomato Sauce",
+            "measurement_unit": 6,
+            "quantity": 2
+        }
+    },
+    {
+        "model": "recipeapi.grocerylistitem",
+        "pk": 5,
+        "fields": {
+            "grocery_list": 1,
+            "ingredient_name": "Pasta",
+            "measurement_unit": 12,
+            "quantity": 1
+        }
+    },
+    {
+        "model": "recipeapi.grocerylistitem",
+        "pk": 6,
+        "fields": {
+            "grocery_list": 2,
+            "ingredient_name": "Cheddar Cheese",
+            "measurement_unit": 1,
+            "quantity": 200
+        }
+    },
+    {
+        "model": "recipeapi.grocerylistitem",
+        "pk": 7,
+        "fields": {
+            "grocery_list": 2,
+            "ingredient_name": "Ground Beef",
+            "measurement_unit": 1,
+            "quantity": 500
+        }
+    },
+    {
+        "model": "recipeapi.grocerylistitem",
+        "pk": 8,
+        "fields": {
+            "grocery_list": 3,
+            "ingredient_name": "Flour",
+            "measurement_unit": 1,
+            "quantity": 3
+        }
+    },
+    {
+        "model": "recipeapi.grocerylistitem",
+        "pk": 9,
+        "fields": {
+            "grocery_list": 3,
+            "ingredient_name": "Sugar",
+            "measurement_unit": 1,
+            "quantity": 2
+        }
+    },
+    {
+        "model": "recipeapi.grocerylistitem",
+        "pk": 10,
+        "fields": {
+            "grocery_list": 4,
+            "ingredient_name": "Butter",
+            "measurement_unit": 1,
+            "quantity": 4
+        }
+    },
+    {
+        "model": "recipeapi.grocerylistitem",
+        "pk": 11,
+        "fields": {
+            "grocery_list": 4,
+            "ingredient_name": "Eggs",
+            "measurement_unit": 1,
+            "quantity": 6
+        }
+    },
+    {
+        "model": "recipeapi.grocerylistitem",
+        "pk": 12,
+        "fields": {
+            "grocery_list": 5,
+            "ingredient_name": "BBQ Sauce",
+            "measurement_unit": 6,
+            "quantity": 1
+        }
+    },
+    {
+        "model": "recipeapi.grocerylistitem",
+        "pk": 13,
+        "fields": {
+            "grocery_list": 5,
+            "ingredient_name": "Hot Dogs",
+            "measurement_unit": 1,
+            "quantity": 10
+        }
+    },
+    {
+        "model": "recipeapi.grocerylistitem",
+        "pk": 14,
+        "fields": {
+            "grocery_list": 6,
+            "ingredient_name": "Milk",
+            "measurement_unit": 1,
+            "quantity": 2
+        }
+    },
+    {
+        "model": "recipeapi.grocerylistitem",
+        "pk": 15,
+        "fields": {
+            "grocery_list": 6,
+            "ingredient_name": "Bread",
+            "measurement_unit": 1,
+            "quantity": 1
+        }
+    },
+    {
+        "model": "recipeapi.grocerylistitem",
+        "pk": 16,
+        "fields": {
+            "grocery_list": 7,
+            "ingredient_name": "Vegetables",
+            "measurement_unit": 1,
+            "quantity": 5
+        }
+    },
+    {
+        "model": "recipeapi.grocerylistitem",
+        "pk": 17,
+        "fields": {
+            "grocery_list": 7,
+            "ingredient_name": "Spices",
+            "measurement_unit": 1,
+            "quantity": 10
+        }
+    }
+]

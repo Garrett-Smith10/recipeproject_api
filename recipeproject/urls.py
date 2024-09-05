@@ -3,11 +3,13 @@ from django.conf.urls.static import static
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 from recipeproject import settings
-from recipeapi.views import UserViewSet, MeasurementUnitViewSet, RecipeViewSet
+from recipeapi.views import UserViewSet, MeasurementUnitViewSet, RecipeViewSet, GroceryListViewSet, UserProfileViewSet
 
 router = DefaultRouter(trailing_slash=False)
 router.register(r"measurement_units", MeasurementUnitViewSet, "measurement_unit")
 router.register(r"recipes", RecipeViewSet, "recipe")
+router.register(r'grocery_lists', GroceryListViewSet, "grocery_list")
+router.register(r'user_profile', UserProfileViewSet, "user_profiles")
 
 urlpatterns = [
     path("", include(router.urls)),
